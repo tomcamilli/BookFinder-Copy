@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button id = "backButton" href="home">
+        <ion-icon name="arrow-back"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+    <ion-title>TCNJ Book Finder</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="white-space: pre-wrap">
+
+   
+
+<!--pinch-zoom>
+<canvas style = "height:50%; width: 100%" id="canvas"></canvas>
+</pinch-zoom-->
+<ion-slides [options]="sliderOpts">
+  <ion-slide>
+    <canvas tappable (click)="openPreview(canvasProp)" style = "height:50%; width: 90%" id="canvas"></canvas>
+  </ion-slide>
+</ion-slides>
+
+<br>
+
+<div> {{info}} </div>
+
+</ion-content>

@@ -1,0 +1,26 @@
+.close-fake {
+  --background: transparent:
+  ion-icon {
+    font-size: 2rem;
+  }
+  margin-top: 40px;
+}
+
+ion-content {
+    //--background: rgba(0, 0, 0, 0.84);
+    --background: url('/assets/Background2.png') no-repeat center/cover fixed;
+    margin:auto;
+}
+
+ion-slides {
+  height:80;
+  
+}
+
+img {
+  padding-top: 50%;
+  padding-bottom: 50%;
+  margin:auto;
+  width: 95%;
+
+}

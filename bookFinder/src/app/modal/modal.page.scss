@@ -1,0 +1,52 @@
+ion-header {
+    
+  --ion-background-color: #262748;
+  text-align: center;
+
+}
+
+ion-content {    
+
+  --background: url('/assets/Background2.png') no-repeat center/cover fixed;
+
+}
+
+ion-title {
+
+  background-color: #262748;
+  color: #ffffff;
+  font-size: 130%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+}
+
+/*ion-tab-button {
+
+  color: #ffffff; 
+  float:left; 
+  font-size: 85%; 
+  //text-decoration: underline; 
+  line-height: 99%;
+
+}
+*/
+p {
+
+  color: #ffffff
+
+}
+
+#closeButton {
+  --color: #ffffff;
+  float: left;
+  text-transform: none !important;
+  --background: #262748;
+  padding-top: 1%;
+  font-weight: inherit;
+  --ripple-color: #ebbc11;
+  --color-activated: #ffffff;
+}

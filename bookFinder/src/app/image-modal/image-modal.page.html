@@ -1,0 +1,28 @@
+<ion-content fullscreen>
+
+    <ion-item class ="close-fake" lines = "none" text-center>
+        <ion-button (click)="close()" fill="clear" color="light">
+          <ion-icon name="close" slot="start"></ion-icon>
+          Back
+        </ion-button>
+        <!-- 
+          These are additional buttons you can have on this page, but we omitted them since they aren't
+          crucial to the functionality of this page. Should you decide to use them, you just need to uncomment them.-->
+        <!--ion-button (click) = "zoom(true)" fill="clear" color="light">
+          <ion-icon name="add" slot="start"></ion-icon>
+          in
+        </ion-button>
+
+        <ion-button (click) = "zoom(false)" fill="clear" color="light">
+          <ion-icon name="remove" slot="start"></ion-icon>
+          out
+        </ion-button-->
+    </ion-item>
+
+    <!--This fetches the image source that is passed to this page from whoever calls this. 
+      Putting it in pinch-zoom allows us to zoom in on the image.-->
+    <pinch-zoom>
+      <img src= "{{getSrc()}}">
+    </pinch-zoom>    
+    
+</ion-content>

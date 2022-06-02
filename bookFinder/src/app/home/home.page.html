@@ -1,0 +1,115 @@
+
+<!--Page Header-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style = "color: #ffffff;">
+      TCNJ Book Finder
+    </ion-title>
+    <ion-button strong = "true" size = "small" shape = "round" fill = "clear" id = "modal" (click)="presentModal()">Help</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<!--Page Body-->
+<!--make div move all of the other elements-->
+<ion-content class="ion-padding">
+  <div> <!--used to be <div style = "margin-left:5%"> -->
+    <h1 style = "padding-top: 35%">I'm looking for...</h1>
+      <!--<h2 id="floor_number"></h2>-->
+      <!--Input for First Call Number
+      User's input stored in a string named "callNum_one"
+      Other inputs will use the name "callNum_two", "callNum_three", etc.-->
+
+      <!--Used to have: (ionChange) = "normalize($event)" debounce = "200" -->
+
+    <ion-item lines=none>
+      <ion-input color = "#222f79" [(ngModel)]="callNum" placeholder="Call Number"></ion-input>
+    </ion-item>
+  
+  <!--Drop-Down Menu for First Call Number
+      This menu determines which section of the library you're looking in
+      It's set to "General Collection" by default-->
+  <!-- (ionChange) = "getCollection($event)" -->
+    <ion-item lines=none>
+      <p>in... &nbsp;</p>
+      <ion-select placeholder="Select a collection" [(ngModel)] = "collection" okText="OK" cancelText="Cancel" interface="popover" (ionChange) = "textUpdate($event)">
+        <ion-select-option value="General Collection">General Collection</ion-select-option>
+        <ion-select-option value="Bound Periodicals">Bound Periodicals</ion-select-option>
+        <ion-select-option value="Caldecott">Caldecott</ion-select-option>
+        <ion-select-option value="Newberry">Newberry</ion-select-option>
+        <ion-select-option value="Current Newspapers">Current Newspapers</ion-select-option>
+        <ion-select-option value="Recent Newspapers">Recent Newspapers</ion-select-option>
+        <ion-select-option value="Current Periodicals">Current Periodicals</ion-select-option>
+        <ion-select-option value="Government Documents">Government Documents</ion-select-option>
+        <ion-select-option value="Leisure Reading">Leisure Reading</ion-select-option>
+        <ion-select-option value="Music Reference">Music Reference</ion-select-option>
+        <ion-select-option value="REC">REC</ion-select-option>
+        <ion-select-option value="New Books">New Books</ion-select-option>
+        <ion-select-option value="RAND">RAND</ion-select-option>
+        <ion-select-option value="Children's Collection">Children's Collection</ion-select-option>
+        <ion-select-option value="Curriculum Reference">Curriculum Reference</ion-select-option>
+        <ion-select-option value="New Textbook Collection">New Textbook Collection</ion-select-option>
+        <ion-select-option value="Old Textbook Collection">Old Textbook Collection</ion-select-option>
+        <ion-select-option value="Reference Collection">Reference Collection</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!--Updating example text based on which drop down item is picked-->
+    <div align="center" style="color:white"> {{info}} </div>
+
+  </div>
+  <br>
+  <!-- App was originally designed with the intention to let the user use three call numbers. -->
+  <!--ion-item lines=none>
+    <ion-input [(ngModel)]="callNum_two" placeholder="Call Number"></ion-input>
+  </ion-item -->
+
+  <!--Drop-Down Menu for Second Call Number
+      This menu determines which section of the library you're looking in
+      It's set to "General Collection" by default
+
+  <ion-item lines=none>
+    <p>in... &nbsp;</p>
+    <ion-select value="General Collection" [(ngModel)]="collection_two" okText="OK" cancelText="Cancel">
+      <ion-select-option value="General Collection">General Collection</ion-select-option>
+      <ion-select-option value="Children's Collection">Children's Collection</ion-select-option>
+      <ion-select-option value="Curriculum Reference">Curriculum Reference</ion-select-option>
+      <ion-select-option value="New Textbook Collection">New Textbook Collection</ion-select-option>
+      <ion-select-option value="Old Textbook Collection">Old Textbook Collection</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <br-->
+
+  <!--Input for Third Call Number
+
+  <ion-item lines=none>
+    <ion-input [(ngModel)]="callNum_three" placeholder="Call Number"></ion-input>
+  </ion-item-->
+
+  <!--Drop-Down Menu for First Call Number
+      This menu determines which section of the library you're looking in
+      It's set to "General Collection" by default
+
+  <ion-item lines=none>
+    <p>in... &nbsp;</p>
+    <ion-select value="General Collection" [(ngModel)]="collection_three" okText="OK" cancelText="Cancel">
+      <ion-select-option value="General Collection">General Collection</ion-select-option>
+      <ion-select-option value="Children's Collection">Children's Collection</ion-select-option>
+      <ion-select-option value="Curriculum Reference">Curriculum Reference</ion-select-option>
+      <ion-select-option value="New Textbook Collection">New Textbook Collection</ion-select-option>
+      <ion-select-option value="Old Textbook Collection">Old Textbook Collection</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <br-->
+
+  <!--Submit Button-->
+  <!--Color is the color of the actual button, not text color
+  It's weird though because color changes the actual button color but if you dont have the background-color, the box is 
+  transparent. So you do need both-->
+  <ion-item class = submitbutton lines=none>
+    <ion-button color = "#d3a40d" size="large" style = "margin:auto; background-color: #d3a40d;" type="submit" (click)="load()">Submit</ion-button>
+  </ion-item>
+
+  </ion-content>

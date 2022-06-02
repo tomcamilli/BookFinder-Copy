@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Help</ion-title>
+    <ion-button strong = "true" size = "small" shape = "round" fill = "clear" id = "closeButton" (click)="closeModal()">X</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<!-- 
+  Each image has its own parameter but they all correspond to the number at the end of the file names 
+  This is why helpPage1 has a value of 1, helpPage2 a value of 2, etc.
+  They run a function called openPreview() on click
+-->
+<ion-content padding>
+  <p> To find your book’s call number and collection: </p> <br>
+
+  <p> 1. Go to https://library.tcnj.edu/ </p> <br>
+  <ion-slides [options]="sliderOpts">
+    <ion-slide>
+      <img src = "assets/help/helpPage1.PNG" tappable (click)="openPreview(1)"/> <br>
+    </ion-slide>
+  </ion-slides>
+      
+
+  <p> 2. Enter your book’s name into the search bar. </p><br>
+  <ion-slides [options]="sliderOpts">
+    <ion-slide>
+      <img src = "assets/help/helpPage2.PNG" tappable (click)="openPreview(2)"/> <br>
+    </ion-slide>
+  </ion-slides>
+
+  <p> 3. Select Books & Media and search. </p> <br> 
+  <ion-slides [options]="sliderOpts">
+    <ion-slide>
+      <img src = "assets/help/helpPage3.PNG" tappable (click)="openPreview(3)"/> <br>
+    </ion-slide>
+  </ion-slides>
+
+  <p> 4. Locate the book you’re looking for from the list of results. </p> <br> 
+  <ion-slides [options]="sliderOpts">
+    <ion-slide>
+      <img src = "assets/help/helpPage4.PNG" tappable (click)="openPreview(4)"/> <br>
+    </ion-slide>
+  </ion-slides>
+
+  <p> 5. If the book is listed as “Available at Gitenstein Library” the collection and call number will be listed afterwards. </p> <br>
+  
+  <div style = "text-align:center"> 
+  <ion-slides [options]="sliderOpts">
+    <ion-slide>
+      <img src = "assets/help/helpPage5.PNG" tappable (click)="openPreview(5)"/> <br>
+    </ion-slide>
+  </ion-slides> <br>
+
+  <span style = "color:#ffffff;"> Note: Do NOT include parentheses in the call number. </span>
+  </div>
+  
+</ion-content>
